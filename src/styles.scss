@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets//utilities/variables.scss';
+
+
+
+.button {
+    padding: 10px 25px 10px 25px;
+    font-size: 16px;
+    border: 1px solid rgb(214, 214, 214);
+    background: white;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 130px;
+    min-height: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    color: $app-button-red;
+    .disabled {
+        border: 0px none;
+        cursor: none;
+    }
+    
+}
