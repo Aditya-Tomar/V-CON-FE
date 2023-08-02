@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { LoginComponent } from 'src/components/login/login.component';
-import { RegisterComponent } from 'src/components/register/register.component';
-import { UserProfileComponent } from 'src/components/user-profile/user-profile.component';
-import { VideoConverterComponent } from 'src/components/video-converter/video-converter.component';
-import { VideoPlayerPageComponent } from 'src/components/video-player-page/video-player-page.component';
-import { VideoUploadPageComponent } from 'src/components/video-upload-page/video-upload-page.component';
+import { LoginComponent } from 'src/component/login/login.component';
+import { RegisterComponent } from 'src/component/register/register.component';
+import { UserProfileComponent } from 'src/component/user-profile/user-profile.component';
+import { VideoConverterComponent } from 'src/component/video-converter/video-converter.component';
+import { VideoPlayerPageComponent } from 'src/component/video-player-page/video-player-page.component';
 
 const routes: Routes = [
   {
@@ -24,11 +23,6 @@ const routes: Routes = [
   {
     path: "profile",
     component: UserProfileComponent,
-    canActivate: []
-  },
-  {
-    path:"upload",
-    component: VideoUploadPageComponent
   },
   {
     path:"video-player",
