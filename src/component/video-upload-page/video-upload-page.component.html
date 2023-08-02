@@ -1,0 +1,50 @@
+<div class="main-container">
+    <h2>Happy to see you have something new to share.</h2>
+
+    <div class="video-upload-container">
+            <label class="upload-file" for="video">
+                <input class="custom-file-input" 
+                    type="file"
+                    id="video"
+                    name="video"
+                    accept="video/*"
+                    (change)="fileBrowseHandler($event)">
+                Select File
+            </label>
+    
+            <button class="button" 
+            [ngClass]="{ 'disabled': !isVideoUploaded }"
+            [disabled]="!isVideoUploaded" (click)="buttonClicked()">{{ buttonName }}</button>
+
+            <button class="button" (click)="clearButton()">Clear</button>
+        
+    </div>
+
+    <!-- <ng-container > -->
+        <div *ngIf="file && file.length>0"  class="uploaded-file-detail-container">
+            <table class="uploaded-file-table">
+                <tr>
+                    <th>File Name:</th>
+                    <td>{{ file[0].name }}</td>
+                </tr>
+                <tr >
+                    <th>File Type:</th>
+                    <td>{{ file[0].type }}</td>
+                </tr>
+                <tr >
+                    <th>File Size:</th>
+                    <td>{{ file[0].size }}</td>
+                </tr>
+                <tr >
+                    <th>Last Modified:</th>
+                    <td>{{ file[0].lastModified }}</td>
+                </tr>
+            </table>
+        </div>
+    <!-- </ng-container> -->
+
+
+    <div class="animation-wrapper" *ngIf="showLoader">
+        <div class="animation"></div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+@use '../../assets/utilities/variables';
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.main-container h2 {
+    padding:15px;
+    font-family: variables.$font-family-rubik;
+}
+
+.video-upload-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 20px;
+}
+
+input[type=file] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-file {
+    display: block;
+    position: relative;
+    min-width: 130px;
+    width: 25vw;
+    height: 7vh;
+    border-radius: 25px;
+    background: linear-gradient(40deg, variables.$app-button-grey, variables.$app-button-red);
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: variables.$white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform .4s ease-in;
+    transform: scale(1);
+    letter-spacing: 1px;
+}
+
+.upload-file:hover {
+    transition: transform .4s ease-out; 
+    transform: scale(1.05);
+}
+
+.button:hover {
+    border: 2px solid variables.$app-button-red; 
+}
+.disabled{
+    color: variables.$app-button-grey;
+}
+.disabled:hover {
+    border: 1px solid rgb(214, 214, 214);
+    cursor:pointer;
+} 
+
+.uploaded-file-detail-container{
+    padding:10px;
+    border: 1px solid rgb(216, 216, 216);
+    background: linear-gradient(45deg, #ff0d0d, #c4c4c4);
+}
+
+.uploaded-file-table {
+    background:white;
+    border-spacing: 5px;
+}
+
+.upload-file-detail-conatiner table,th,td {
+    padding: 10px;
+    text-align: left;
+    border: 0px;
+    border-bottom: 1px solid #cfcfcf;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.upload-file-detail-conatiner td {
+    min-width: 10vw;
+}
+
+
+.animation-wrapper {
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+
+.animation {
+    width: 25px;
+    height: 5px;
+    border-radius: 25px;
+    border: 4px solid red;
+    margin-top: 4px;
+    opacity: 0.5;
+    animation: rotator 3s infinite;
+}
+
+@keyframes rotator {
+    0% {
+        transform: scale(1) rotateZ(0deg);
+    }
+    50% {
+        transform: scale(1.6);
+    }
+    100% {
+        transform: scale(1) rotateZ(359deg);
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    h2 {
+        display: none;
+    }
+
+    .video-upload-container{
+        gap: 10px;
+    }
+
+}
