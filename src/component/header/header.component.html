@@ -1,0 +1,8 @@
+<header class="header-main-container">
+    <div class="header-content">
+        <span data-wy="'a'"  *ngFor="let header of headerData"
+            [routerLink]="header.url"
+            routerLinkActive="is-active"
+        >{{ header.value }}</span>
+    </div>
+</header>
