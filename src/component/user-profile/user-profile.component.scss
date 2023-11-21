@@ -1,0 +1,64 @@
+@use '../../assets/utilities/variables';
+
+.display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-wrapper {
+    @extend .display-flex;
+    flex-direction: column;
+    height: 100vh;
+    gap:40px;
+}
+.user-profile-container {
+    @extend .display-flex; 
+    max-height: 40vh;
+    border: 1px solid variables.$black;
+}
+.user-profile-wrapper {
+    padding: 10px;
+    margin: 15px;
+    border-bottom: 1px solid variables.$black;
+}
+
+.user-data-container {
+    @extend .display-flex;
+    justify-content: space-evenly;
+    background-color: variables.$appRed;
+    width: 100%;
+    height: 10rem;
+    margin-top: 20px;
+}
+
+// .uploaded-video-count {
+//     margin: 25px;
+//     padding: 10px; 
+//     min-width: 14rem;
+// }
+
+.converted-video-count {
+    margin: 25px;
+    padding: 10px;
+    min-width: 2rem;
+}
+
+.count-des {
+    color: variables.$white;
+    font-family: variables.$font-family-rubik;
+    font-size: variables.$font-size-30;
+}
+
+// hr {
+//     border: 2px solid white;
+//     height: 70%;
+//     margin:15px;
+// }
+
+
+@media screen and (max-width: 300px){
+    .main-wrapper {
+        margin-top: 50px;
+    }
+}

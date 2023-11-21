@@ -14,6 +14,8 @@ import { RegisterComponent } from '../component/register/register.component';
 import { UserProfileComponent } from 'src/component/user-profile/user-profile.component';
 import { HeaderComponent } from '../component/header/header.component';
 import { VideoConverterComponent } from '../component/video-converter/video-converter.component';
+import { DynamicComponentComponent } from '../component/dynamic-component/dynamic-component.component';
+import { DynamicComp } from 'src/component/dynamic.directive';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { VideoConverterComponent } from '../component/video-converter/video-conv
     UserProfileComponent,
     HeaderComponent,
     VideoConverterComponent,
+    DynamicComponentComponent,
+    DynamicComp
 
   ],
   imports: [

@@ -1,0 +1,42 @@
+
+<section class="video-transcode-wrapper">
+    <div class="video-upload-wrapper">
+        <app-video-upload-page 
+        [buttonName]="buttonName" 
+        [showLoader]="true"
+        (onButtonClicked)="sendVideoToTranscode($event)"
+        ></app-video-upload-page>
+    </div>
+
+    <div class="transcoded-link-wrapper">
+        <ng-container *ngIf="!($isLoading | async)">
+            <ng-container *ngIf="$isVideoTranscoded | async">
+                <h2>
+                    Transcoded video Link
+                </h2>
+                <div *ngIf="$videoLink | async as link">
+                    <span (click)="downloadVideo()"> {{ link }}</span>
+                    <span>Preview</span>
+                    <span (click)="toggleNameTemplate()">Download</span>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="true; then inputNameTemplate"></ng-container>
+        </ng-container>
+
+        <ng-container *ngIf="$isLoading | async">
+            //
+        </ng-container>
+    </div>
+    
+</section>
+
+
+<ng-template></ng-template>
+
+<ng-template #name >
+    <p>Please enter name by which you want the file to be saved.</p>
+    <label>Enter File Name </label>
+    <input type="text" autofocus [(ngModel)]="fileName">
+    <button (click)="downloadVideo()">Submit</button> <span (click)="toggleNameTemplate()">>>hide<<</span>
+</ng-template>
+<ng-template #nothing></ng-template>

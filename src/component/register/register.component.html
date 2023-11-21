@@ -1,0 +1,16 @@
+
+<div class="login-container">
+    <div class="login-wrapper">
+        <form class="login-from-container" [formGroup]="registerForm">
+                <input class="input-box" type="text" id="fname" placeholder="First Name" formControlName="fname">
+                <input class="input-box" type="text" id="lname" placeholder="Last Name" formControlName="lname">
+                <input class="input-box" type="email" id="email" placeholder="Email" formControlName="email">
+                <input class="input-box" type="number" id="pnumber" placeholder="Phone Number" formControlName="phoneNumber">
+                <input class="input-box" type="password" id="password" placeholder="Password" formControlName="password">
+                <input class="input-box" type="password" id="rePassword" placeholder="Re-enter Password" formControlName="rePassword">
+
+                <button class="login-button" [disabled]="!registerForm.valid" (click)="signup()">Signup</button>
+        </form>
+        <span class="login-link">Already a member? <a [routerLink]="'/login'">Login</a></span>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+<div class="video-player-container">
+
+    <div class="video-player-wrapper">
+    
+        <video class="video-player" [preload]="'auto'" controls 
+        (loadeddata)="dataLoaded()" 
+        (progress)="progress()" 
+        (pause) ="paused()" 
+        (play)="played()"
+        (ratechange)="ratechange()"> 
+            <!-- <source src="../../assets/video/flower.webm" type="video/webm"> -->
+            <source src="http://localhost:3000/api/video"
+             type="video/webm">
+            Browser not supported
+        </video>    
+            <!-- "../../assets/video/video.mp4" -->
+    </div> 
+    
+    
+    <div class="video-content-container">
+        <h2>My Personal Recording</h2>
+        <p class="video-content-detail">
+        something is here to say.asf af
+         fasdsg 
+         sdg sd
+         sdg s
+        click more
+        <br><br>
+        <br>asgfawe <br>
+        <br>
+        fvdfc
+        <br> <br>
+        dvadv<br>   
+        more content
+        </p>
+    </div>
+
+</div>

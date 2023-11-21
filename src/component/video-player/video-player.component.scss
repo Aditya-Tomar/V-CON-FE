@@ -1,0 +1,41 @@
+.video-player-container{
+
+}
+
+.video-player-wrapper{
+    width: 100%;
+    height: 100%;
+    min-height: 10vh;
+    min-width: 20vw;
+    background-color: rgb(225, 59, 59);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-player {
+    margin: 15px;
+    padding: 10px;
+    border: 0px solid;
+    border-radius: 21px;
+    min-width: 50%;
+    max-width: 95%;
+    background-color: white;
+}
+
+.video-content-container {
+    margin-left: 20px;
+    margin-top: 20px;
+    h2 {
+        margin:0px;
+        border-bottom: 1px solid grey;
+    }
+}
+
+.video-content-detail{
+    margin-top:10px;
+    min-height: 20vh;
+    overflow-y: auto;
+}
