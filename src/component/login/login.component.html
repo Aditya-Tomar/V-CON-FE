@@ -1,0 +1,13 @@
+
+<div class="login-container">
+    <div class="login-wrapper">
+        <form class="login-from-container" [formGroup]="loginForm">
+                <input class="input-box" type="email" id="email" placeholder="Email" formControlName="email">
+                <input class="input-box" type="password" id="password" placeholder="Password" formControlName="password">
+                <span class="forget-password" (click)="forgetPassword()">Forget Password?</span>
+
+                <button class="login-button" (click)="login()">Login</button>
+        </form>
+        <span class="signup-link" (click)="forgetPassword()">New to this Platform? <a [routerLink]="'/register'">Signup</a></span>
+    </div>
+</div>
